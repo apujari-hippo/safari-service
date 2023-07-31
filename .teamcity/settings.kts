@@ -83,4 +83,10 @@ object BuildAndroid_Deploy : BuildType({
 object BuildIOS : Project({
     name = "Build iOS"
     description = "Building iOS app."
+
+    buildType(BuildIOS_BuildIOS)
+})
+
+object BuildIOS_BuildIOS : BuildType({
+    name = "Build iOS"
 })
