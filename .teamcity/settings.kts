@@ -38,5 +38,9 @@ object Build : BuildType({
             name = "build"
             scriptContent = """echo "Build""""
         }
+        script {
+            name = "build2"
+            scriptContent = """echo "Build2""""
+        }
     }
 })
