@@ -52,9 +52,14 @@ object BuildAndroid : Project({
     name = "Build Android"
     description = "Building android app."
 
+    buildType(BuildAndroid_Deploy)
     buildType(BuildAndroid_Build)
 })
 
 object BuildAndroid_Build : BuildType({
     name = "Build"
+})
+
+object BuildAndroid_Deploy : BuildType({
+    name = "Deploy"
 })
