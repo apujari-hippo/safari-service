@@ -28,6 +28,8 @@ version = "2023.05"
 project {
 
     buildType(Build)
+
+    subProject(BuildAndroid)
 }
 
 object Build : BuildType({
@@ -43,4 +45,9 @@ object Build : BuildType({
             scriptContent = """echo "Build2""""
         }
     }
+})
+
+
+object BuildAndroid : Project({
+    name = "Build Android"
 })
