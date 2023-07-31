@@ -89,4 +89,11 @@ object BuildIOS : Project({
 
 object BuildIOS_BuildIOS : BuildType({
     name = "Build iOS"
+
+    steps {
+        script {
+            name = "build"
+            scriptContent = """echo "Build iOS""""
+        }
+    }
 })
