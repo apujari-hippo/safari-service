@@ -58,6 +58,13 @@ object BuildAndroid : Project({
 
 object BuildAndroid_Build : BuildType({
     name = "Build"
+
+    steps {
+        script {
+            name = "build"
+            scriptContent = """echo "Building android app.""""
+        }
+    }
 })
 
 object BuildAndroid_Deploy : BuildType({
