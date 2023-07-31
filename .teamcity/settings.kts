@@ -62,4 +62,11 @@ object BuildAndroid_Build : BuildType({
 
 object BuildAndroid_Deploy : BuildType({
     name = "Deploy"
+
+    steps {
+        script {
+            name = "deploy"
+            scriptContent = """echo "Deploying android app""""
+        }
+    }
 })
