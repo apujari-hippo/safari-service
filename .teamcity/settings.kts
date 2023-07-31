@@ -30,6 +30,7 @@ project {
     buildType(Build)
 
     subProject(BuildAndroid)
+    subProject(BuildIOS)
 }
 
 object Build : BuildType({
@@ -76,4 +77,9 @@ object BuildAndroid_Deploy : BuildType({
             scriptContent = """echo "Deploying android app""""
         }
     }
+})
+
+
+object BuildIOS : Project({
+    name = "Build iOS"
 })
