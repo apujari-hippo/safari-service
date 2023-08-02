@@ -28,9 +28,12 @@ version = "2023.05"
 project {
 
     buildType(Build)
+}
 
-    subProject(BuildAndroid)
-    subProject(BuildIOS)
+object Util {
+    fun helloWorld(user:String = "World"): String {
+    return "Hello " + user
+    }
 }
 
 object Build : BuildType({
@@ -42,58 +45,12 @@ object Build : BuildType({
             scriptContent = """echo "Build""""
         }
         script {
-            name = "build2"
-            scriptContent = """echo "Build2""""
+            name = "build frontend"
+            scriptContent = Util.helloWorld("Frontend")
         }
-    }
-})
-
-
-object BuildAndroid : Project({
-    name = "Build Android"
-    description = "Building android app."
-
-    buildType(BuildAndroid_Deploy)
-    buildType(BuildAndroid_Build)
-})
-
-object BuildAndroid_Build : BuildType({
-    name = "Build"
-
-    steps {
         script {
-            name = "build"
-            scriptContent = """echo "Building android app.""""
-        }
-    }
-})
-
-object BuildAndroid_Deploy : BuildType({
-    name = "Deploy"
-
-    steps {
-        script {
-            name = "deploy"
-            scriptContent = """echo "Deploying android app""""
-        }
-    }
-})
-
-
-object BuildIOS : Project({
-    name = "Build iOS"
-    description = "Building iOS app."
-
-    buildType(BuildIOS_BuildIOS)
-})
-
-object BuildIOS_BuildIOS : BuildType({
-    name = "Build iOS"
-
-    steps {
-        script {
-            name = "build"
-            scriptContent = """echo "Build iOS""""
+            name = "build backend"
+            scriptContent = Util.helloWorld("Backend")
         }
     }
 })
