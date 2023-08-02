@@ -32,7 +32,7 @@ project {
 
 object Util {
     fun helloWorld(user:String = "World"): String {
-        return "Hello " + user
+        return "echo Hello " + user
     }
 }
 
@@ -42,11 +42,11 @@ object Build : BuildType({
     steps {
         script {
             name = "build"
-            scriptContent = """echo "Build""""
+            scriptContent = """echo Build"""
         }
         script {
             name = "build default"
-            scriptContent = """echo Util.helloWorld()"""
+            scriptContent = Util.helloWorld()
         }
     }
 })
