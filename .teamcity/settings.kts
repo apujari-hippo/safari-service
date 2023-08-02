@@ -45,12 +45,8 @@ object Build : BuildType({
             scriptContent = """echo "Build""""
         }
         script {
-            name = "build frontend"
-            scriptContent = Util.helloWorld("Frontend")
-        }
-        script {
-            name = "build backend"
-            scriptContent = Util.helloWorld("Backend")
+            name = "build default"
+            scriptContent = Util.helloWorld()
         }
     }
 })
