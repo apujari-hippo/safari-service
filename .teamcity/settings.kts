@@ -32,7 +32,7 @@ project {
 
 object Util {
     fun helloWorld(user:String = "World"): String {
-    return String("Hello " + user)
+    return """echo "Hello " + user"""
     }
 }
 
