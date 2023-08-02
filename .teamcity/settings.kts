@@ -48,5 +48,15 @@ object Build : BuildType({
             name = "build default"
             scriptContent = Util.helloWorld()
         }
+
+        script {
+            name = "build frontend"
+            scriptContent = Util.helloWorld("Frontend")
+        }
+
+        script {
+            name = "build backend"
+            scriptContent = Util.helloWorld("Backend")
+        }
     }
 })
